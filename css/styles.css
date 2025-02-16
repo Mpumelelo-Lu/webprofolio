@@ -1,0 +1,170 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2d3748;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a5568;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    overflow: hidden;
+}
+
+/* Skill bar hover effect */
+.skill-bar {
+    transition: all 0.3s ease;
+}
+
+.skill-bar:hover {
+    box-shadow: 0 0 15px rgba(45, 55, 72, 0.5);
+    background: #4a5568;
+}
+
+.chart-container {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.info-container {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-content {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.typing-text {
+    min-height: 1.2em;
+}
+
+/* Hobbies Animation */
+.hobby-row {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.hobby-track-left, .hobby-track-right {
+    display: flex;
+    position: absolute;
+    gap: 2rem;
+    width: fit-content;
+    padding: 0 1rem;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #4a5568;
+    border-radius: 12px;
+    background: white;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hobby-track-left {
+    animation: moveLeft 20s linear infinite;
+}
+
+.hobby-track-right {
+    animation: moveRight 20s linear infinite;
+}
+
+@keyframes moveLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes moveRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .sidebar {
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        height: auto;
+        padding: 1rem;
+    }
+    body {
+        overflow: auto;
+    }
+    .chart-container {
+        width: 35px;
+        height: 35px;
+    }
+    .info-container {
+        font-size: 0.85rem;
+    }
+    .typing-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    .flex-col {
+        flex-direction: column !important;
+    }
+    .sidebar {
+        height: auto;
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+    }
+    .main-content {
+        width: 100%;
+        height: auto;
+        padding: 0.75rem;
+    }
+    .chart-container {
+        width: 32px;
+        height: 32px;
+    }
+    .info-container {
+        font-size: 0.85rem;
+    }
+    .hobby-row {
+        height: 50px;
+    }
+    .hobby-item {
+        padding: 0.5rem 1rem;
+    }
+}

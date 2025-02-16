@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Certification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #f3f4f6;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .project-image iframe {
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transform-origin: top;
+            pointer-events: none;
+            margin-left: -0px;
+            margin-right: -0px;
+        }
+
+        .project-card:hover .project-image iframe {
+            pointer-events: auto;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, transparent, #f3f4f6);
+        }
+
+        .world-icon {
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-white font-['Share_Tech_Mono']">
+    <!-- Header -->
+    <header class="text-center py-10 bg-gray-100 flex items-center justify-center gap-6">
+        <a href="Certification/FoundationalC.html" class="text-4xl text-gray-800 hover:text-gray-600 transition-colors">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="text-4xl font-bold text-gray-800">Responsive Web Design</h1>
+        <a href="Certification/Dot-Net&Java.html" class="text-4xl text-gray-800 hover:text-gray-600 transition-colors">
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </header>
+    
+
+    <!-- Certificate Section -->
+    <section class="max-w-4xl mx-auto p-6">
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+            <img src="img/certification2.png" alt="Web Design Certificate" class="w-full">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="max-w-6xl mx-auto p-6 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <iframe 
+                        src="https://mpumelelo-lu.github.io/Survey/"
+                        class="w-full h-full border-none"
+                        title="Survey Form Project">
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Survey Form</h3>
+                    <p class="text-gray-600 mb-4">A responsive survey form with various input types and form validations.</p>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Mpumelelo-Lu/Survey" 
+                           class="inline-block bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                            View Project
+                        </a>
+                        <a href="https://mpumelelo-lu.github.io/Survey/" 
+                           class="world-icon bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                           title="Visit project website">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span class="sr-only">Visit project website</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <iframe 
+                        src="https://mpumelelo-lu.github.io/trumpet/"
+                        class="w-full h-full border-none"
+                        title="Tribute Page Project">
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Store page</h3>
+                    <p class="text-gray-600 mb-4">An elegant store page showcasing responsive design and modern layout techniques.</p>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Mpumelelo-Lu/trumpet" 
+                           class="inline-block bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                            View Project
+                        </a>
+                        <a href="https://mpumelelo-lu.github.io/trumpet" 
+                           class="world-icon bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                           title="Visit project website">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span class="sr-only">Visit project website</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <iframe 
+                        src="https://mpumelelo-lu.github.io/Documentation/"
+                        class="w-full h-full border-none"
+                        title="Technical Documentation Project">
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Technical Documentation</h3>
+                    <p class="text-gray-600 mb-4">A comprehensive technical documentation page with responsive navigation.</p>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Mpumelelo-Lu/Documentation" 
+                           class="inline-block bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                            View Project
+                        </a>
+                        <a href="https://mpumelelo-lu.github.io/Documentation/" 
+                           class="world-icon bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                           title="Visit project website">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span class="sr-only">Visit project website</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

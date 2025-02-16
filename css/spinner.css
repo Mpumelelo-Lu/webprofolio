@@ -1,0 +1,53 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    gap: 20px;
+}
+
+.spinner {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: spin 1s linear infinite;
+    color: #666;
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    color: #666;
+    min-height: 24px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .spinner {
+        font-size: 1.5rem;
+    }
+    .loading-text {
+        font-size: 1rem;
+    }
+}
